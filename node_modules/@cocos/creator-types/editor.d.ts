@@ -1,1 +1,0 @@
-/// <reference path="./editor/index.d.ts"/>
