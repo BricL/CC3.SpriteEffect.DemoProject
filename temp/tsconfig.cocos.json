@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "strict": true,
+    "types": [
+      "./temp/declarations/cc.custom-macro",
+      "./temp/declarations/cc",
+      "./temp/declarations/jsb",
+      "./temp/declarations/cc.env"
+    ],
+    "paths": {
+      "db://internal/*": [
+        "/Applications/Cocos/Creator/3.8.2/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/*"
+      ],
+      "db://assets/*": [
+        "/Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/assets/*"
+      ],
+      "db://sprite_effect/*": [
+        "/Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/*"
+      ]
+    },
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

@@ -1,0 +1,380 @@
+2024-6-8 22:24:43-log: Cannot access game frame or container.
+2024-6-8 22:24:43-debug: asset-db:require-engine-code (1520ms)
+2024-6-8 22:24:43-log: meshopt wasm decoder initialized
+2024-6-8 22:24:44-log: [box2d]:box2d wasm lib loaded.
+2024-6-8 22:24:44-log: [bullet]:bullet wasm lib loaded.
+2024-6-8 22:24:45-log: Cocos Creator v3.8.2
+2024-6-8 22:24:49-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:107.13MB, end 195.11MB, increase: 87.98MB
+2024-6-8 22:24:49-debug: [Assets Memory track]: asset-db-plugin-enable: project start:107.30MB, end 195.11MB, increase: 87.81MB
+2024-6-8 22:24:49-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:105.16MB, end 195.11MB, increase: 89.95MB
+2024-6-8 22:24:49-debug: [Assets Memory track]: asset-db-plugin-enable: builder start:107.60MB, end 198.41MB, increase: 90.81MB
+2024-6-8 22:24:45-debug: [Assets Memory track]: asset-db-plugin-register: programming start:105.79MB, end 107.08MB, increase: 1.29MB
+2024-6-8 22:24:45-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:21.22MB, end 105.16MB, increase: 83.94MB
+2024-6-8 22:24:49-debug: run package(node-library) handler(enable) start
+2024-6-8 22:24:49-debug: run package(package-asset) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(process) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(reference-image) handler(enable) start
+2024-6-8 22:24:49-debug: run package(reference-image) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(reflection-probe) handler(enable) start
+2024-6-8 22:24:49-debug: run package(reflection-probe) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(engine-extends) handler(enable) start
+2024-6-8 22:24:49-debug: run package(engine-extends) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(adsense-h5g-plugin) handler(enable) start
+2024-6-8 22:24:49-debug: run package(adsense-h5g-plugin) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(alipay-mini-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(alipay-mini-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(android) handler(enable) start
+2024-6-8 22:24:49-debug: run package(android) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(bytedance-mini-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(bytedance-mini-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(package-asset) handler(enable) start
+2024-6-8 22:24:49-debug: run package(certificate) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(channel-upload-tools) handler(enable) start
+2024-6-8 22:24:49-debug: run package(channel-upload-tools) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(fb-instant-games) handler(enable) start
+2024-6-8 22:24:49-debug: run package(fb-instant-games) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(node-library) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(certificate) handler(enable) start
+2024-6-8 22:24:49-debug: run package(huawei-quick-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(huawei-quick-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(ios) handler(enable) start
+2024-6-8 22:24:49-debug: run package(huawei-agc) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(linux) handler(enable) start
+2024-6-8 22:24:49-debug: run package(linux) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(mac) handler(enable) start
+2024-6-8 22:24:49-debug: run package(huawei-agc) handler(enable) start
+2024-6-8 22:24:49-debug: run package(native) handler(enable) start
+2024-6-8 22:24:49-debug: run package(native) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(ohos) handler(enable) start
+2024-6-8 22:24:49-debug: run package(ohos) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(openharmony) handler(enable) start
+2024-6-8 22:24:49-debug: run package(openharmony) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(oppo-mini-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(oppo-mini-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(runtime-dev-tools) handler(enable) start
+2024-6-8 22:24:49-debug: run package(runtime-dev-tools) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(taobao-creative-app) handler(enable) start
+2024-6-8 22:24:49-debug: run package(taobao-creative-app) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(taobao-mini-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(taobao-mini-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(vivo-mini-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(vivo-mini-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(web-desktop) handler(enable) start
+2024-6-8 22:24:49-debug: run package(web-desktop) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(web-mobile) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(web-mobile) handler(enable) start
+2024-6-8 22:24:49-debug: run package(wechatgame) handler(enable) start
+2024-6-8 22:24:49-debug: run package(wechatgame) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(wechatprogram) handler(enable) start
+2024-6-8 22:24:49-debug: run package(wechatprogram) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(windows) handler(enable) start
+2024-6-8 22:24:49-debug: run package(windows) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(xiaomi-quick-game) handler(enable) start
+2024-6-8 22:24:49-debug: run package(xiaomi-quick-game) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(cocos-service) handler(enable) start
+2024-6-8 22:24:49-debug: run package(cocos-service) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(im-plugin) handler(enable) start
+2024-6-8 22:24:49-debug: run package(im-plugin) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(fix-device) handler(enable) start
+2024-6-8 22:24:49-debug: run package(fix-device) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(sprite_effect) handler(enable) start
+2024-6-8 22:24:49-debug: run package(sprite_effect) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(placeholder) handler(enable) start
+2024-6-8 22:24:49-debug: run package(placeholder) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(process) handler(enable) start
+2024-6-8 22:24:49-debug: run package(ios) handler(enable) success!
+2024-6-8 22:24:49-debug: run package(mac) handler(enable) success!
+2024-6-8 22:24:49-debug: asset-db:worker-init: initPlugin (4026ms)
+2024-6-8 22:24:49-debug: [Assets Memory track]: asset-db:worker-init start:21.22MB, end 198.95MB, increase: 177.72MB
+2024-6-8 22:24:49-debug: Run asset db hook engine-extends:beforePreStart success!
+2024-6-8 22:24:49-debug: Run asset db hook programming:beforePreStart success!
+2024-6-8 22:24:49-debug: Run asset db hook engine-extends:beforePreStart ...
+2024-6-8 22:24:49-debug: Run asset db hook programming:beforePreStart ...
+2024-6-8 22:24:50-debug: asset-db:worker-init (7695ms)
+2024-6-8 22:24:50-debug: asset-db-hook-programming-beforePreStart (348ms)
+2024-6-8 22:24:50-debug: asset-db-hook-engine-extends-beforePreStart (349ms)
+2024-6-8 22:24:50-debug: Preimport db internal success
+2024-6-8 22:24:50-debug: Preimport db assets success
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texturebackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/chunksbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assetsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/compbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosionbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/chunks/util.chunkbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_color.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_colorizing.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_disappear.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_distort.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_dissolve.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_flow_light.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_test.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_water_flow.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_gaussian_blur.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_shadow.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectBase.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_water_ripple.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectColor.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectColorizing.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/effect/sprite_effect_water_wave.effectbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectDisappear.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectDissolve.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectDistort.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectFlowLight.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectGaussianBlur.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectShadow.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectTest.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectWaterFlow.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectWaterRipple.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/comp/SpriteEffectWaterWave.tsbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:50-debug: Run asset db hook programming:afterPreStart ...
+2024-6-8 22:24:50-debug: starting packer-driver...
+2024-6-8 22:24:50-debug: Preimport db sprite_effect success
+2024-6-8 22:24:51-debug: initialize scripting environment...
+2024-6-8 22:24:51-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-6-8 22:24:51-debug: [Assets Memory track]: asset-db:worker-init: preStart start:198.95MB, end 217.06MB, increase: 18.11MB
+2024-6-8 22:24:51-debug: Start up the 'internal' database...
+2024-6-8 22:24:51-debug: Run asset db hook engine-extends:afterPreStart success!
+2024-6-8 22:24:51-debug: Run asset db hook programming:afterPreStart success!
+2024-6-8 22:24:51-debug: Run asset db hook engine-extends:afterPreStart ...
+2024-6-8 22:24:51-debug: asset-db-hook-programming-afterPreStart (1373ms)
+2024-6-8 22:24:51-debug: asset-db:worker-effect-data-processing (24ms)
+2024-6-8 22:24:51-debug: asset-db-hook-engine-extends-afterPreStart (24ms)
+2024-6-8 22:24:51-debug: [Assets Memory track]: asset-db:worker-startup-database[internal] start:210.15MB, end 213.63MB, increase: 3.48MB
+2024-6-8 22:24:51-debug: Start up the 'assets' database...
+2024-6-8 22:24:51-debug: asset-db:worker-startup-database[internal] (1781ms)
+2024-6-8 22:24:51-debug: [Assets Memory track]: asset-db:worker-startup-database[assets] start:210.75MB, end 213.66MB, increase: 2.92MB
+2024-6-8 22:24:51-debug: Start up the 'sprite_effect' database...
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/animation.animbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: asset-db:worker-startup-database[assets] (1738ms)
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explode.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/deep_ocean.jpegbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank1.jpegbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/cocos_logo.png.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank2.jpegbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explode.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/deep_ocean.jpeg@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank1.jpeg@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/deep_ocean.jpeg@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank1.jpeg@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/perlin_noise.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank2.jpeg@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/fish_tank2.jpeg@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/cocos_logo.png.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plistbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/cocos_logo.png.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@52715background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@6982fbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@d19ecbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/perlin_noise.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@123b8background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@2f938background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/watersuface.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/symbol.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_1.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_10.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_11.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_1.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/watersuface.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_1.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_10.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/watersuface.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_10.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_11.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_11.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_12.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_13.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_14.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_12.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_13.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_12.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_14.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_13.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_14.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_15.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_16.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_17.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_15.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_15.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_16.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_17.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_16.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_17.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_18.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_19.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_18.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_2.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_18.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_20.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/symbol.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_19.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/symbol.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_19.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_2.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_20.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_2.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_20.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_21.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_22.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_21.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_23.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_24.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_21.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_22.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_22.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_23.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_23.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_24.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_24.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_25.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_26.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_27.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_25.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_28.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_25.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_26.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_29.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_26.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_27.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_27.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_28.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_29.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_28.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_29.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_3.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_30.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_31.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_32.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_3.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_3.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_30.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_33.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_30.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_31.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_32.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_31.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_32.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_33.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_34.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_33.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_35.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_36.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_34.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_37.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_34.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_35.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_38.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_35.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_36.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_37.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_36.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_37.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_38.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_38.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_39.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_4.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_40.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_39.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_41.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_39.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_4.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_42.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_4.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_40.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_40.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_41.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_41.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_42.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_43.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_44.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_42.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_45.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_43.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_46.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_44.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_43.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_44.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_45.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_47.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_45.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_46.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_46.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_48.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_47.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_49.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_47.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_5.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_6.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_48.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_49.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_48.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_5.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_49.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_5.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_7.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_6.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_6.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/explosion.animbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_7.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_8.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_9.pngbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_7.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_8.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_9.png@6c48abackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_8.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/explosion/FireBallEmission_9.png@f9941background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:51-debug: %cImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plistbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: %cReImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@52715background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: %cReImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@6982fbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: %cReImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@d19ecbackground: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: %cReImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@123b8background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: %cReImport%c: /Users/kengyulin/Documents/MyProject/CC/CC3.SpriteEffect.DemoProject/extensions/sprite-effect/source/assets/assets/texture/sheep.plist@2f938background: #aaff85; color: #000;color: #000;
+2024-6-8 22:24:52-debug: [Assets Memory track]: asset-db:worker-startup-database[sprite_effect] start:211.43MB, end 215.89MB, increase: 4.46MB
+2024-6-8 22:24:52-debug: asset-db:worker-startup-database[sprite_effect] (1912ms)
+2024-6-8 22:24:52-debug: asset-db:start-database (2274ms)
+2024-6-8 22:24:52-debug: asset-db:ready (13333ms)
+2024-6-8 22:24:52-debug: init worker message success
+2024-6-8 22:24:52-debug: [Build Memory track]: builder:worker-init start:218.42MB, end 224.59MB, increase: 6.18MB
+2024-6-8 22:24:52-debug: programming:execute-script (5ms)
+2024-6-8 22:24:52-debug: builder:worker-init (644ms)
+2024-6-8 22:24:55-debug: refresh db internal success
+2024-6-8 22:24:55-debug: refresh db assets success
+2024-6-8 22:24:55-debug: refresh db sprite_effect success
+2024-6-8 22:24:55-debug: Run asset db hook engine-extends:afterRefresh ...
+2024-6-8 22:24:55-debug: Run asset db hook engine-extends:afterRefresh success!
+2024-6-8 22:24:55-debug: asset-db:refresh-all-database (118ms)
+2024-6-8 22:24:55-debug: asset-db:worker-effect-data-processing (1ms)
+2024-6-8 22:24:55-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2024-6-8 22:24:55-debug: programming:execute-script (15ms)
+2024-6-8 22:25:04-debug: Query all assets info in project
+2024-6-8 22:25:04-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-6-8 22:25:04-debug:   Number of all scenes: 1
+2024-6-8 22:25:04-debug:   Number of all scripts: 16
+2024-6-8 22:25:04-debug:   Number of other assets: 515
+2024-6-8 22:25:04-debug: Query asset bundle start, progress: 0%
+2024-6-8 22:25:04-debug: // ---- build task Query asset bundle ----
+2024-6-8 22:25:04-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,9361fd90-ba52-4f84-aa93-6e878fd576ca,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,ba21476f-2866-4f81-9c4d-6e359316e448,871c3b6c-7379-419d-bda3-794b239ab90d,1d08ef62-a503-4ce2-8b9a-46c90873f7d3
+2024-6-8 22:25:04-debug: // ---- build task Query asset bundle ---- (11ms)
+2024-6-8 22:25:04-debug: run build task Query asset bundle success in 11 ms√, progress: 5%
+2024-6-8 22:25:04-debug: [Build Memory track]: Query asset bundle start:229.20MB, end 231.83MB, increase: 2.63MB
+2024-6-8 22:25:04-debug: Query asset bundle start, progress: 5%
+2024-6-8 22:25:04-debug: // ---- build task Query asset bundle ----
+2024-6-8 22:25:04-debug: // ---- build task Query asset bundle ---- (1ms)
+2024-6-8 22:25:04-debug: Sort some build options to settings.json start, progress: 10%
+2024-6-8 22:25:04-debug: run build task Query asset bundle success in 1 ms√, progress: 10%
+2024-6-8 22:25:04-debug: [Build Memory track]: Query asset bundle start:231.83MB, end 231.85MB, increase: 12.01KB
+2024-6-8 22:25:04-debug: // ---- build task Sort some build options to settings.json ----
+2024-6-8 22:25:04-debug: // ---- build task Sort some build options to settings.json ---- (1ms)
+2024-6-8 22:25:04-debug: run build task Sort some build options to settings.json success in 1 ms√, progress: 12%
+2024-6-8 22:25:04-debug: [Build Memory track]: Sort some build options to settings.json start:231.86MB, end 231.87MB, increase: 16.43KB
+2024-6-8 22:25:04-debug: Fill script data to settings start, progress: 12%
+2024-6-8 22:25:04-debug: // ---- build task Fill script data to settings ----
+2024-6-8 22:25:04-debug: run build task Fill script data to settings success in √, progress: 13%
+2024-6-8 22:25:04-debug: [Build Memory track]: Fill script data to settings start:231.88MB, end 231.89MB, increase: 11.18KB
+2024-6-8 22:25:04-debug: Sort some build options to settings.json start, progress: 13%
+2024-6-8 22:25:04-debug: // ---- build task Sort some build options to settings.json ----
+2024-6-8 22:25:04-debug: // ---- build task Sort some build options to settings.json ---- (3ms)
+2024-6-8 22:25:04-debug: run build task Sort some build options to settings.json success in 3 ms√, progress: 15%
+2024-6-8 22:25:04-debug: [Build Memory track]: Sort some build options to settings.json start:231.90MB, end 232.01MB, increase: 117.06KB

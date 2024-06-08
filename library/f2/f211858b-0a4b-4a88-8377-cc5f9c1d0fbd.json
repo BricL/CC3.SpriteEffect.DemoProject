@@ -1,0 +1,18 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "sheep",
+    "spriteFrames": [
+      "sheep_jump_0",
+      "f211858b-0a4b-4a88-8377-cc5f9c1d0fbd@52715",
+      "sheep_jump_1",
+      "f211858b-0a4b-4a88-8377-cc5f9c1d0fbd@6982f",
+      "sheep_jump_2",
+      "f211858b-0a4b-4a88-8377-cc5f9c1d0fbd@d19ec",
+      "sheep_jump_3",
+      "f211858b-0a4b-4a88-8377-cc5f9c1d0fbd@123b8",
+      "sheep_jump_4",
+      "f211858b-0a4b-4a88-8377-cc5f9c1d0fbd@2f938"
+    ]
+  }
+}
