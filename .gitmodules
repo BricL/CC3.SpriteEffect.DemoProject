@@ -1,0 +1,3 @@
+[submodule "extensions/sprite_effect"]
+	path = extensions/sprite_effect
+	url = https://github.com/BricL/CC3.SpriteEffect.git
