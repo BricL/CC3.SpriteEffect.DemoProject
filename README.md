@@ -1,4 +1,4 @@
-# CC3.SpriteEffect_DemoProject
+# CC3.SpriteEffect.DemoProject
 關於 CC3.SpriteEffect 的效果範例，都在這個項目專案中。
 
 ## 注意事項
