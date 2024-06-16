@@ -1,6 +1,7 @@
-import { _decorator, Color, Component, lerp, math, Node, random, tween } from 'cc';
-import { SpriteEffectBase } from '../extensions/sprite_effect/source/assets/comp/SpriteEffectBase';
-import { SpriteEffectColor } from '../extensions/sprite_effect/source/assets/comp/SpriteEffectColor';
+import { _decorator, Color, Component, lerp, math, Node, random, Sprite, tween } from 'cc';
+import { SpriteEffectColor } from '../../../extensions/sprite_effect/source/assets/comp/SpriteEffectColor';
+import { SpriteEffectBase } from '../../../extensions/sprite_effect/source/assets/comp/SpriteEffectBase';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('TweenRandomColor')
@@ -11,10 +12,14 @@ export class TweenRandomColor extends Component {
     @property
     public color2: Color = new Color(0, 255, 0, 255);
 
-    private _spEffectBase: SpriteEffectBase = null;
+    private _sp: Sprite = null;
 
     start() {
-        this._spEffectBase = this.node.getComponent(SpriteEffectColor);
+        this._sp = this.node.getComponent(SpriteEffectColor);
+        if (this._sp === null) {
+            this._sp = this.node.getComponent(Sprite);
+        }
+
         this.color1 = new Color(math.randomRangeInt(0, 256), math.randomRangeInt(0, 256), math.randomRangeInt(0, 256), 255);
         this.color2 = new Color(math.randomRangeInt(0, 256), math.randomRangeInt(0, 256), math.randomRangeInt(0, 256), 255);
         this.tweenColor();
@@ -29,7 +34,12 @@ export class TweenRandomColor extends Component {
 
                 let color = new Color();
                 Color.lerp(color, this.color1, this.color2, current);
-                this._spEffectBase.effectColor = color;
+
+                if (this._sp instanceof SpriteEffectBase)
+                    this._sp.effectColor = color;
+                else
+                    this._sp.color = color;
+
                 return current;
             }
         }).to(1.0, { dt: 0.0 }, {
@@ -39,7 +49,12 @@ export class TweenRandomColor extends Component {
 
                 let color = new Color();
                 Color.lerp(color, this.color1, this.color2, current);
-                this._spEffectBase.effectColor = color;
+
+                if (this._sp instanceof SpriteEffectBase)
+                    this._sp.effectColor = color;
+                else
+                    this._sp.color = color;
+
                 return current;
             },
             onComplete: () => {
