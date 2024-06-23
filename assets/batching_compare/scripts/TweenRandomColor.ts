@@ -1,6 +1,6 @@
 import { _decorator, Color, Component, lerp, math, Node, random, Sprite, tween } from 'cc';
-import { SpriteEffectColor } from '../../../extensions/sprite_effect/static/assets/comp/SpriteEffectColor';
-import { SpriteEffectBase } from '../../../extensions/sprite_effect/static/assets/comp/SpriteEffectBase';
+import { SpriteEffectColor } from '../../../extensions/sprite_effect/static/comp/SpriteEffectColor';
+import { SpriteEffectBase } from '../../../extensions/sprite_effect/static/comp/SpriteEffectBase';
 
 const { ccclass, property } = _decorator;
 
