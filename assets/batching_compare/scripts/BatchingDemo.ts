@@ -3,6 +3,8 @@ import { SpriteEffectColor } from '../../../extensions/sprite_effect/source/stat
 import { EffectColor } from './non_batching_effect/EffectColor';
 const { ccclass, property } = _decorator;
 
+const MAX_INSTANCES_COUNT = 768;
+
 @ccclass('BatchingDemo')
 export class BatchingDemo extends Component {
     @property(Prefab)
@@ -75,7 +77,7 @@ export class BatchingDemo extends Component {
             curChild = refNode.getComponentsInChildren(EffectColor);
         }
 
-        const count = Math.floor(lerp(0.0, 512.0, this._sliderProgress));
+        const count = Math.floor(lerp(0.0, MAX_INSTANCES_COUNT, this._sliderProgress));
 
         let addCount = curChild.length - count;
         if (addCount > 0) {
