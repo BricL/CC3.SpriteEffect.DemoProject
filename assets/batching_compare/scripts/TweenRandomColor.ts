@@ -1,4 +1,4 @@
-import { _decorator, Color, Component, lerp, math, Node, random, Sprite, tween } from 'cc';
+import { _decorator, Color, Component, lerp, math, Node, random, Sprite, Tween, tween } from 'cc';
 import { SpriteEffectColor } from '../../../extensions/sprite_effect/source/static/comp/SpriteEffectColor';
 import { SpriteEffectBase } from '../../../extensions/sprite_effect/source/static/comp/SpriteEffectBase';
 
@@ -14,6 +14,7 @@ export class TweenRandomColor extends Component {
     public color2: Color = new Color(0, 255, 0, 255);
 
     private _sp: Sprite = null;
+    private _t: any = null;
 
     start() {
         this._sp = this.node.getComponent(SpriteEffectColor);
@@ -27,8 +28,8 @@ export class TweenRandomColor extends Component {
     }
 
     private tweenColor() {
-        let t = { dt: 0.0 };
-        tween(t).to(1.0, { dt: 1.0 }, {
+        this._t = { dt: 0.0 };
+        tween(this._t).to(1.0, { dt: 1.0 }, {
             easing: 'linear',
             progress: (start, end, current, ratio) => {
                 current = lerp(start, end, ratio);
@@ -66,6 +67,10 @@ export class TweenRandomColor extends Component {
 
     update(deltaTime: number) {
 
+    }
+
+    protected onDestroy(): void {
+        Tween.stopAllByTarget(this._t);
     }
 }
 
