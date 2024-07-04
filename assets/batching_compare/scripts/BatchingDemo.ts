@@ -3,7 +3,7 @@ import { SpriteEffectColor } from '../../../extensions/sprite_effect/source/stat
 import { EffectColor } from './non_batching_effect/EffectColor';
 const { ccclass, property } = _decorator;
 
-const MAX_INSTANCES_COUNT = 768;
+const MAX_INSTANCES_COUNT = 1024;
 
 @ccclass('BatchingDemo')
 export class BatchingDemo extends Component {
