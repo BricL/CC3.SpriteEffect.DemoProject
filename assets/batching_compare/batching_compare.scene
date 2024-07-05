@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "batchingDemo",
+    "_name": "batching_compare",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
