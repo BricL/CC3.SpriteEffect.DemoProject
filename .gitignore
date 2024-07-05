@@ -7,6 +7,8 @@ local/
 build/
 profiles/
 native
+test/
+test.meta
 #//////////////////////////
 # NPM
 #//////////////////////////
