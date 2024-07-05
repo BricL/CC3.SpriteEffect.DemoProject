@@ -1,6 +1,6 @@
 # CC3.SpriteEffect.DemoProject
 
-![Static Badge](https://img.shields.io/badge/CocosCreator-3.8.x-green) ![Static Badge](https://img.shields.io/badge/Version-0.1.2a-blue) ![Static Badge](https://img.shields.io/badge/Test_On-web-purple)
+![Static Badge](https://img.shields.io/badge/CocosCreator-3.8.x-green) ![Static Badge](https://img.shields.io/badge/Version-0.1.2a-blue) ![Static Badge](https://img.shields.io/badge/TestOn-web-purple)
 
 關於 CC3.SpriteEffect 的效果範例，都在這個項目專案中。
 
