@@ -1,4 +1,4 @@
-import { _decorator, Component, error, instantiate, lerp, log, Node, Prefab, Slider, Toggle } from 'cc';
+import { _decorator, Component, director, error, instantiate, lerp, log, Node, Prefab, Slider, Toggle } from 'cc';
 import { SpriteEffectColor } from '../../../extensions/sprite_effect/source/static/comp/SpriteEffectColor';
 import { EffectColor } from './non_batching_effect/EffectColor';
 const { ccclass, property } = _decorator;
@@ -24,6 +24,10 @@ export class BatchingDemo extends Component {
 
     private _sliderProgress: number = 0.0;
     private _mode: number = 0;
+
+    public onBackButton() {
+        director.loadScene("all_effect");
+    }
 
     public onSliderCallback(slider: Slider, customEventData: string) {
         this._sliderProgress = slider.progress;

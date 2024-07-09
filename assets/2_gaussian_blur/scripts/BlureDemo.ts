@@ -1,9 +1,13 @@
-import { _decorator, Component, find, log, Node, Slider } from 'cc';
+import { _decorator, Component, director, find, log, Node, Slider } from 'cc';
 import { SpriteEffectGaussianBlur } from '../../../extensions/sprite_effect/source/static/comp/SpriteEffectGaussianBlur';
 const { ccclass, property } = _decorator;
 
 @ccclass('BlureDemo')
 export class BlureDemo extends Component {
+    public onBackButton() {
+        director.loadScene("all_effect");
+    }
+
     public onSliderCallback(slider: Slider, customEventData: string) {
         this.apply(this.node, slider.progress);
     }
