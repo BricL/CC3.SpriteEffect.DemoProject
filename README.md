@@ -10,5 +10,3 @@
   
   >[project_folder]/extensions/sprite_effect 下
 * 若用 git clone，記得啟動 submodule 並 clone CC3.SpriteEffect
-
-<iframe frameborder="0" src="https://itch.io/embed-upload/10919196?color=333333" allowfullscreen="" width="360" height="660"><a href="https://bricl.itch.io/cc3spriteeffectdemo">Play CC3.SpriteEffect.Demo on itch.io</a></iframe>
