@@ -5,7 +5,7 @@
 關於 CC3.SpriteEffect 的效果範例，都在這個項目專案中。
 
 
-## itch Demo
+## itch.io Demo
 [Demo Link](https://bricl.itch.io/cc3spriteeffectdemo)
 
 
