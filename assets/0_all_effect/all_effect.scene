@@ -29,7 +29,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 219
+      "__id__": 220
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -60,7 +60,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 220
+      "__id__": 221
     },
     "_id": "97181ce8-bd3d-40de-8775-742aad480dd8"
   },
@@ -277,6 +277,9 @@
       },
       {
         "__id__": 218
+      },
+      {
+        "__id__": 219
       }
     ],
     "_prefab": null,
@@ -598,7 +601,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -945,7 +948,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -1209,7 +1212,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 2,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -1490,7 +1493,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -1775,7 +1778,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -2030,7 +2033,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -2321,7 +2324,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -2635,7 +2638,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -2897,7 +2900,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 4,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -3165,7 +3168,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 2,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -3413,7 +3416,7 @@
       "__type__": "cc.Color",
       "r": 0,
       "g": 2,
-      "b": 0,
+      "b": 128,
       "a": 255
     },
     "_spriteFrame": {
@@ -3629,12 +3632,12 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_alignFlags": 45,
+    "_alignFlags": 41,
     "_target": null,
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 0,
+    "_bottom": 590,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,
@@ -3700,6 +3703,36 @@
     "_id": "f1uMt2v25M6J9yf7htNaAS"
   },
   {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_alignFlags": 45,
+    "_target": null,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_horizontalCenter": 0,
+    "_verticalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 720,
+    "_originalHeight": 1280,
+    "_alignMode": 2,
+    "_lockFlags": 0,
+    "_id": "e1LdnECb1P77XOvbFI9iBV"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": null,
     "asset": null,
@@ -3745,28 +3778,28 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 221
-    },
-    "shadows": {
       "__id__": 222
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 223
     },
-    "fog": {
+    "_skybox": {
       "__id__": 224
     },
-    "octree": {
+    "fog": {
       "__id__": 225
     },
-    "skin": {
+    "octree": {
       "__id__": 226
     },
-    "lightProbeInfo": {
+    "skin": {
       "__id__": 227
     },
-    "postSettings": {
+    "lightProbeInfo": {
       "__id__": 228
+    },
+    "postSettings": {
+      "__id__": 229
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
