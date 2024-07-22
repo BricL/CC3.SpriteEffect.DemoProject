@@ -11,5 +11,9 @@ export class AllEffectDemo extends Component {
     public onClikcColorButton() {
         director.loadScene("batching_compare");
     }
+
+    public onClickTransitionButton() {
+        director.loadScene("transition");
+    }
 }
 
