@@ -1250,7 +1250,7 @@
       "a": 255
     },
     "_is2Din3D": false,
-    "secondSprite": {
+    "spriteFrame2": {
       "__uuid__": "2ea3acc6-526f-4b9e-9a86-29264d329846@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
