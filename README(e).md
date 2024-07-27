@@ -6,15 +6,13 @@
 
 語言(Language) CN | [EN](./README(e).md)
 
-關於 [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect) 的效果範例，都在這個項目專案中。
+This project includes demos of each effect in [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect).
 
-## 注意事項
-* CC3.SpriteEffect 為此專案的 Submodule
-* 請記得一起下載 CC3.SpriteEffect 並安裝至:
-  
-  >[project_folder]/extensions/sprite_effect 下
-* 若用 git clone，記得啟動 submodule 並 clone CC3.SpriteEffect
+## Noted
 
-## itch.io Demo
+* CC3.SpriteEffect is included as a submodule.
+* Download CC3.SpriteEffect and install it to `${PROJECT_FOLDER}/extensions/sprite_effect`, or clone CC3.SpriteEffect using the submodule.
+
+## Live Demo
 
 [![Demo Link](./doc/img/cc3_sprite_effect_demo.gif)](https://bricl.itch.io/cc3spriteeffectdemo)
