@@ -130,7 +130,49 @@
   }
   ```
 
-* 這個範例我們簡單定義一個 `effectColor` 傳入 Shader 中，對原 Sprite 進行顏色相加，代碼如下：
+* 屬性貼圖的儲存方式
+
+    ![explain_props_texture_formate](./doc/img/explain_props_texture_formate.png)
+
+    因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
+
+* Sprite.color 如何在 TS 中編碼
+
+    ```typescript
+    this.color = new Color(this._instanceID % PROP_TEXTURE_SIZE, // R Channel
+                           pixelsUsage,                          // G Channel
+                           PROP_TEXTURE_SIZE,                    // B Channel
+                           255);                                 // A Channel
+    ```
+
+    * R通道 `this._instanceID`，代表這是這個 shader 的第幾個實體，可以想成多個 Sprite 使用同一個 shader，但都有自己的 shader 參數。
+
+    * G通道 `PROP_TEXTURE_SIZE`，代表這張屬性貼圖的寬度大小。
+
+    * B通道 `pixelsUsage`，一個 pixel 四個通道，代表四個 float 可使用，每個 float 都可以保存參數，而該 shader 的可調整參數有幾個，%4 代表使用了幾個 pixels。
+
+    * A通道 `255`，設定為預設值，但不使用。
+
+* Sprite.color 如何在 Shader 中解碼
+
+    ```GLSL
+    // propTexture: 參數贴图
+    // encodeIdx: 參數索引編碼
+    // idxOfProps: 效果中的參數索引
+    vec4 getPropFromPropTexture(sampler2D propTexture, vec4 encodeIdx, int idxOfProps) {
+        vec2 prop_uv = vec2((1.0/(encodeIdx.b * 255.0)) * (encodeIdx.r * 255.0), 
+                            (1.0/(encodeIdx.g * 255.0)) * float(idxOfProps));
+        return texture(propTexture, prop_uv);
+    }
+    ```
+
+    * `encodeColor`，傳入的 Sprite.color。
+
+    * `vec4 decodeColor = encodeColor * 255.0;`，將 0.0 ~ 1.0 轉換回 int 0 ~ 255 的 index。
+
+    * 利用 `decodeColor` 計算出 `prop_texture_uv`，從 `propTexture` 中取出所屬的參數。
+
+* 範例簡單定義一個 `effectColor` 傳入 Shader 中，對原 Sprite 進行顏色相加，代碼如下：
 
     ```GLSL
     CCEffect %{
@@ -191,14 +233,15 @@
 
         vec4 frag () {
             // [記住] Sprite 原始的 color 屬性已經被拿去當作 index。
-            vec4 idx = color;
-            vec4 effectColor = getPropFromPropTexture(propsTexture, idx, 0);
+            vec4 effectColor = getPropFromPropTexture(propsTexture, color, 0);
 
             // [小心思] index 編碼避免使用 a，因此會保留為 CC 中上一階 Canvas 透明 a，讓自定義的效果依然能正常受影響。
             effectColor = vec4(effectColor.rgb, effectColor.a * color.a); 
 
             vec4 o = vec4(1, 1, 1, 1);
             o = CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+
+            // 顏色與 effectColor 相加
             o = vec4(o.rgb + effectColor.rgb, o.a * effectColor.a);
 
             ALPHA_TEST(o);
@@ -206,49 +249,6 @@
         }
     }%
     ```
-
-* 屬性貼圖的儲存方式
-
-    ![explain_props_texture_formate](./doc/img/explain_props_texture_formate.png)
-
-    因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
-
-* Sprite.color 如何在 TS 中編碼
-
-    ```typescript
-    this.color = new Color(this._instanceID % PROP_TEXTURE_SIZE, // R Channel
-                           pixelsUsage,                          // G Channel
-                           PROP_TEXTURE_SIZE,                    // B Channel
-                           255);                                 // A Channel
-    ```
-
-    * R通道 `this._instanceID`，代表這是這個 shader 的第幾個實體，可以想成多個 Sprite 使用同一個 shader，但都有自己的 shader 參數。
-
-    * G通道 `PROP_TEXTURE_SIZE`，代表這張屬性貼圖的寬度大小。
-
-    * B通道 `pixelsUsage`，一個 pixel 四個通道，代表四個 float 可使用，每個 float 都可以保存參數，而該 shader 的可調整參數有幾個，%4 代表使用了幾個 pixels。
-
-    * A通道 `255`，設定為預設值，但不使用。
-
-* Sprite.color 如何在 Shader 中解碼
-
-    ```GLSL
-    // 參數贴图中获取參數：
-    // propTexture: 參數贴图
-    // idxColor: 參數索引編碼
-    // idxOfProps: 效果中的參數索引
-    vec4 getPropFromPropTexture(sampler2D propTexture, vec4 encodeIdx, int idxOfProps) {
-        vec2 prop_uv = vec2((1.0/(encodeIdx.b * 255.0)) * (encodeIdx.r * 255.0), 
-                            (1.0/(encodeIdx.g * 255.0)) * float(idxOfProps));
-        return texture(propTexture, prop_uv);
-}
-    ```
-
-    * `encodeColor`，傳入的 Sprite.color。
-
-    * `vec4 decodeColor = encodeColor * 255.0;`，將 0.0 ~ 1.0 轉換回 int 0 ~ 255 的 index。
-
-    * 利用 `decodeColor` 計算出 `prop_texture_uv`，從 `propTexture` 中取出所屬的參數。
 
 ## 範例代碼
 
