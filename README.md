@@ -12,9 +12,9 @@
 * CC3.SpriteEffect 為此專案的 Submodule
 * 請記得一起下載 CC3.SpriteEffect 並安裝至`${PROJECT_FOLDER}/extensions/sprite_effect`，或啟動 submodule 並 clone CC3.SpriteEffect
 
-## itch.io Demo
+## itch.io Demo (https://bricl.itch.io/cc3spriteeffectdemo)
 
-[![Demo Link](./doc/img/cc3_sprite_effect_demo.gif)](https://bricl.itch.io/cc3spriteeffectdemo)
+<p align="center"><img src="./doc/img/cc3_sprite_effect_demo.gif" width="350"></p>
 
 # UI(Sprite) 利用 Property Atlas 合批
 
@@ -36,7 +36,7 @@
 
 * 屬性貼圖的儲存方式
 
-    <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="512"></p>
+    <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="350"></p>
 
     因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
 
@@ -322,8 +322,8 @@
 
 * 上述的概念在 [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect/tree/master) 實現了一個樣板庫，可依此使用及延伸出各種 Sprite 效果方便使用。
 
-<p align="center"><img src="./doc/img/demo_project.png" width="365"></p>
-<p align="center"><img src="./doc/img/demo_drawcall_count.png" width="365"></p>
+<p align="center"><img src="./doc/img/demo_project.png" width="350"></p>
+<p align="center"><img src="./doc/img/demo_drawcall_count.png" width="350"></p>
 
 ## 參考文獻
 * [【分享】CocosCreator3.x 应用在UI(Sprite) 上的 shader(.effect) 的合批，通过自定义顶点参数](https://forum.cocos.org/t/topic/153963)
