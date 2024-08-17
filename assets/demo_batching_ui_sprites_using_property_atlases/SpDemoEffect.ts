@@ -1,4 +1,4 @@
-import { _decorator, Color, Component, EffectAsset, log, Material, Node, Sprite, Texture2D } from 'cc';
+import { _decorator, Color, EffectAsset, Material, Sprite, Texture2D, warn } from 'cc';
 import { EDITOR_NOT_IN_PREVIEW } from 'cc/env';
 const { ccclass, property } = _decorator;
 
@@ -67,7 +67,7 @@ export class SpDemoEffect extends Sprite {
     //#region Lifecycle Methods
     start() {
         if (!this.effectAsset) {
-            log("Please specify the effect asset in the editor");
+            warn("Please specify the effect asset in the editor");
             return;
         }
 
