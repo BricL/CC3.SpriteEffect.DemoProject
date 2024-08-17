@@ -20,34 +20,37 @@
 
 依官方文件[【2D 渲染组件合批规则说明】](https://docs.cocos.com/creator/3.8/manual/zh/ui-system/components/engine/ui-batch.html#%E5%90%88%E6%89%B9%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E)，Sprite 一但使用 customMaterial 合批 (batch) 就會被拆分。而同 Shader 不同參數想合批，正統是將參數帶入頂點中。詳細做法論壇上的 bakabird 大大提供保母級的教程 [【分享】CocosCreator3.x 应用在UI(Sprite) 上的 shader(.effect) 的合批，通过自定义顶点参数](https://forum.cocos.org/t/topic/153963)。這方法需對 Sprite 的 4 種頂點宣告模式 (SIMPLE、SLICE、TILED、FILLED) 作實現。
 
-還有其他方法可以不用動到修改頂點格式嗎？想到剛進業界時，早期研發引擎時用過 `Propert Atlas`。這方法的特點在於，將同 Shader 不同參數 pack 至一張貼圖中，再透過索引 (index) 於 Shader 取出參數進行渲染，如此利用引擎本身的合批來減少 drawcall，對不同的 Shader 效果的參數還能有個統一的做法。好了！廢話少說，馬上來看實作思路。
+還有其他方法可以不用動到修改頂點格式嗎？
 
-### 實踐思路
-* 一張 Shader `參數貼圖`，採用格式 RGBA32。
-* 每個 Sprite 有代表自己的 index 傳入 Shader 中，以便取出自己所屬的參數。
-* Component 依據 index 將參數存入`參數貼圖`中。
+### Propert Atlas
 
-* 問題來了，如何產生 index 傳入 Shader 中？
+這方法的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的設定參數 pack 至貼圖中，渲染時透過索引於取出所屬參數進行計算，如此就能利用引擎本身的合批規則減少 Drawcall。
 
-  * 這裡用了點小心思，簡單的拿 Sprite.color 利用引擎原實作就綁定該屬性在頂點上當 index。
+#### 實踐思路
+
+* 對一 Shader 效果準備一張格式 RGBA32 的 `參數貼圖(PropsTexture)`。
+
+* 每個 Sprite 在同一 Shader 效果下，自有所屬唯一的 index。
+
+* 藉此 index 在渲染時對 `參數貼圖(PropsTexture)` 取出所屬參數並計算。
 
 ## 上代碼
 
-### SpDemoEffect
+### SpDemoEffect.ts
 
 * 繼承 Sprite Component
 
     ```typescript
-    @ccclass('SpriteEffectBase')
+    @ccclass('SpDemoEffect')
     export class SpDemoEffect extends Sprite { 
-        ...
+        //...略
     }
     ```
 
-* static 參數說明
+* static 參數
 
     ```typescript
-    @ccclass('SpriteEffectBase')
+    @ccclass('SpDemoEffect')
     export class SpDemoEffect extends Sprite { 
         private static propsTexture: Texture2D | null = null;
         private static propBuffer: Float32Array | null = null;
@@ -55,17 +58,17 @@
         private static mat: Material | null = null;
         private static isDirty: boolean = false;
         private instanceID: number = -1;
-        ...
+        //...略
     }
     ```
 
-    * `propsTexture`，參數貼圖，用來儲存不同 Sprite 在同一個 Shader 各自的參數。
+    在同一 Sprite Shader 效果下，所有 Sprite 共用的參數: 
 
-    * `propBuffer`，typescript 端參數 buffer，暫存參數並於異動時在 laterUpdate 同步至 `propsTexture`。
+    * `propsTexture`，參數貼圖，用來儲存同一個 Shader 效果不同 Sprite 各自的設定參數。
 
-    * `effectUUID`，儲存每個 Node 的 uuid，給予當下 Sprite 一個唯一的 instanceID。
+    * `propBuffer`，TypeScript 端參數 buffer，暫存參數並於 `laterUpdate()` 檢查異動同步 `propsTexture`。
 
-    * `instanceID`， Sprite 的 唯一的 instanceID，作為取出 propsTexture 參數用的 index。
+    * `effectUUID` 與 `instanceID`，利用 CC 每個 Node 的 uuid 唯一性，給予當下 Sprite 一個唯一的 `instanceID`。
 
         ```typescript
         this.instanceID = SpDemoEffect.effectUUID.findIndex((uuid) => uuid === this.node.uuid);
@@ -75,36 +78,39 @@
         }
         ```
 
-    * `mat`，同一效果共用材質球。
+    * `mat`，同 Sahder 效果共用一個材質。
 
     * `isDirty`，參數異動的旗標。
 
 
-* 建立材質球、參數貼圖
+* 建立參數貼圖
 
     ```typescript
-    const PROP_TEXTURE_SIZE = 128;
+    const PROP_TEXTURE_SIZE = 128; // 定義屬性貼圖 width
 
-    @ccclass('SpriteEffectBase')
+    @ccclass('SpDemoEffect')
     export class SpDemoEffect extends Sprite { 
-        ...
+        //...略
         start() {
             if (!this.effectAsset) {
-                log("Please specify the effect asset in the editor");
+                warn("需指定 effect asset");
                 return;
             }
 
+            // 利用 CC 每個 Node 的 uuid 唯一性，給予當下 Sprite 一個唯一的 `instanceID`
             this.instanceID = SpDemoEffect.effectUUID.findIndex((uuid) => uuid === this.node.uuid);
             if (this.instanceID === -1) {
                 this.instanceID = SpDemoEffect.effectUUID.push(this.node.uuid) - 1;
             }
 
+            // 利用 Sprite Component 中的 color 將 instanceID 傳入 Shader 效果中
             this.color = new Color(this.instanceID % PROP_TEXTURE_SIZE,
                 this.pixelsUsage,
                 PROP_TEXTURE_SIZE,
                 255);
 
             if (SpDemoEffect.mat === null) {
+                // 建立材質與屬性貼圖(PropsTexture)
                 const w = PROP_TEXTURE_SIZE;
                 const h = this.pixelsUsage;
 
@@ -128,23 +134,11 @@
                     mipmapLevel: 0
                 });
                 SpDemoEffect.propsTexture.uploadData(SpDemoEffect.propBuffer);
-
-                SpDemoEffect.mat = new Material();
-                SpDemoEffect.mat.initialize(
-                    {
-                        effectAsset: this.effectAsset,
-                        defines: {},
-                        technique: 0
-                    }
-                );
-                SpDemoEffect.mat.setProperty('propsTexture', SpDemoEffect.propsTexture);
+                //...略
             }
-
-            this.customMaterial = SpDemoEffect.mat;
-
-            this.reflashParams();
+            //...略
         }
-        ...
+        //...略
     }
     ```
 
@@ -153,13 +147,14 @@
     ```typescript
     const PROP_TEXTURE_SIZE = 128;
 
-    @ccclass('SpriteEffectBase')
-    export class SpriteEffectBase extends Sprite { 
-        ...
+    @ccclass('SpDemoEffect')
+    export class SpDemoEffect extends Sprite { 
+        //...略
         start() {
-            ...
+            //...略
+            // 建立客制材質，綁定 `propsTexture` 指定至 customMaterial 參數
             if (SpDemoEffect.mat === null) {
-                ...
+                //...略
                 SpDemoEffect.mat = new Material();
                 SpDemoEffect.mat.initialize(
                     {
@@ -174,16 +169,20 @@
             this.customMaterial = SpDemoEffect.mat;
             this.reflashParams();
         }
-        ...
+        //...略
     }
     ```
 
 * `laterUpdate` 時，若有參數有異動時進行更新
 
   ```typescript
-  @ccclass('SpriteEffectBase')
-  export class SpriteEffectBase extends Sprite {
-    ...
+  @ccclass('SpDemoEffect')
+  export class SpDemoEffect extends Sprite {
+    //...略
+    start() {
+        //...略
+    }
+
     lateUpdate(deltaTime: number) {
         if (SpDemoEffect.isDirty) {
             SpDemoEffect.propsTexture!.uploadData(SpDemoEffect.propBuffer!);
