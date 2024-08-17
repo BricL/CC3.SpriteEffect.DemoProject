@@ -512,7 +512,7 @@
     "_useGrayscale": false,
     "_atlas": null,
     "effectAsset": {
-      "__uuid__": "1963c186-2138-4369-9e4e-384743e13813",
+      "__uuid__": "eee97dc0-8b41-4737-8801-2446756f7369",
       "__expectedType__": "cc.EffectAsset"
     },
     "_effectColor": {
@@ -632,7 +632,7 @@
     "_useGrayscale": false,
     "_atlas": null,
     "effectAsset": {
-      "__uuid__": "1963c186-2138-4369-9e4e-384743e13813",
+      "__uuid__": "eee97dc0-8b41-4737-8801-2446756f7369",
       "__expectedType__": "cc.EffectAsset"
     },
     "_effectColor": {
@@ -752,7 +752,7 @@
     "_useGrayscale": false,
     "_atlas": null,
     "effectAsset": {
-      "__uuid__": "1963c186-2138-4369-9e4e-384743e13813",
+      "__uuid__": "eee97dc0-8b41-4737-8801-2446756f7369",
       "__expectedType__": "cc.EffectAsset"
     },
     "_effectColor": {
