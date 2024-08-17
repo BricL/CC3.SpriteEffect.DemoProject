@@ -34,6 +34,12 @@
 
 * 藉此 index 在渲染時對 `參數貼圖(PropsTexture)` 取出所屬參數並計算。
 
+* 屬性貼圖的儲存方式
+
+    <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="512"></p>
+
+    因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
+
 ## 上代碼
 
 ### SpDemoEffect.ts
@@ -81,7 +87,6 @@
     * `mat`，同 Sahder 效果共用一個材質。
 
     * `isDirty`，參數異動的旗標。
-
 
 * 建立參數貼圖
 
@@ -173,7 +178,7 @@
     }
     ```
 
-* `laterUpdate` 時，若有參數有異動時進行更新
+* `laterUpdate`，若有參數有異動時進行更新
 
   ```typescript
   @ccclass('SpDemoEffect')
@@ -192,51 +197,28 @@
   }
   ```
 
-* 屬性貼圖的儲存方式
-
-    ![explain_props_texture_formate](./doc/img/explain_props_texture_formate.png)
-
-    因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
-
-### SpDemoEffect.effect
-
-* Sprite.color 如何在 TS 中編碼
+* 每個 Sprite 的 `instanceID` 利用 Sprite.color 傳入 Shader 效果中，在 TypeScript 中編碼
 
     ```typescript
-    this.color = new Color(this.instanceID % PROP_TEXTURE_SIZE,
+    this.color = new Color(this.instanceID,
                            this.pixelsUsage,
                            PROP_TEXTURE_SIZE,
                            255);
     ```
 
-    * R通道 `this._instanceID`，代表這是這個 shader 的第幾個實體，可以想成多個 Sprite 使用同一個 shader，但都有自己的 shader 參數。
+    * R通道 `this._instanceID`
 
-    * G通道 `PROP_TEXTURE_SIZE`，代表這張屬性貼圖的寬度大小。
+    * G通道 `pixelsUsage`，一個 pixel 有 4 個 float 可以保存參數，代表這個 Shader 效果參數用了幾個 4 各 float。
 
-    * B通道 `pixelsUsage`，一個 pixel 四個通道，代表四個 float 可使用，每個 float 都可以保存參數，而該 shader 的可調整參數有幾個，%4 代表使用了幾個 pixels。
+    * B通道 `PROP_TEXTURE_SIZE`，參數貼圖 Width。
 
-    * A通道 `255`，設定為預設值，但不使用。
+    * A通道 `255`，設定為預設值不使用。
 
-* 在 Shader 中解碼 Sprite.color
+### SpDemoEffect.effect
 
-    ```GLSL
-    // propTexture: 參數贴图
-    // encodeIdx: 參數索引編碼
-    // idxOfProps: 效果中的參數索引
-    vec4 getPropFromPropTexture(sampler2D propTexture, vec4 encodeIdx, int idxOfProps) {
-        vec2 prop_uv = vec2((1.0/(encodeIdx.b * 255.0)) * (encodeIdx.r * 255.0), 
-                            (1.0/(encodeIdx.g * 255.0)) * float(idxOfProps));
-        return texture(propTexture, prop_uv);
-    }
-    ```
+這個 Shader 效果為簡單定義一個 `effectColor` 對原 Sprite 進行顏色相加。
 
-    * `encodeColor`，傳入的 Sprite.color。
-
-    * `vec4 decodeColor = encodeColor * 255.0;`，將 0.0 ~ 1.0 轉換回 int 0 ~ 255 的 index。
-
-    * 利用 `decodeColor` 計算出 `prop_texture_uv`，從 `propTexture` 中取出所屬的參數。
-
-* 簡單定義一個 `effectColor` 傳入 Shader 中對原 Sprite 進行顏色相加
+* 代碼如下
 
     ```GLSL
     CCEffect %{
@@ -279,7 +261,7 @@
         out vec2 uv0;
 
         vec4 vert () {
-            ...
+            //...略
         }
     }%
 
@@ -299,7 +281,8 @@
             // [記住] Sprite 原始的 color 屬性已經被拿去當作 index。
             vec4 effectColor = getPropFromPropTexture(propsTexture, color, 0);
 
-            // [小心思] index 編碼避免使用 a，因此會保留為 CC 中上一階 Canvas 透明 a，讓自定義的效果依然能正常受影響。
+            // [小心思] index 編碼避免使用 a，因此會保留為 CC 中上一階 Canvas
+            // 透明 a，讓自定義的效果依然能正常受影響。
             effectColor = vec4(effectColor.rgb, effectColor.a * color.a); 
 
             vec4 o = vec4(1, 1, 1, 1);
@@ -314,11 +297,33 @@
     }%
     ```
 
+* 在 Shader 中解碼 Sprite.color
+
+    ```GLSL
+    // propTexture: 參數贴图
+    // encodeIdx: 參數索引編碼
+    // idxOfProps: 效果中的參數索引
+    vec4 getPropFromPropTexture(sampler2D propsTexture, vec4 encodeIdx, int idxOfProps) {
+        vec2 prop_uv = vec2((1.0/(encodeIdx.b * 255.0)) * (encodeIdx.r * 255.0), 
+                            (1.0/(encodeIdx.g * 255.0)) * float(idxOfProps));
+        return texture(propsTexture, prop_uv);
+    }
+    ```
+
+    * `propsTexture`，屬性貼圖。
+
+    * `encodeColor`，傳入的 Sprite.color，解碼後即為 `instanceID` ，貼圖座標的 `u` 用來存取 `propsTexture`。
+
+    * `idxOfProps`，解法後為 Shader 效果中的第幾個參數，貼圖座標的 `v` 用來存取 `propsTexture`。
+
 ## 完整代碼
 
 * 完整代碼放在 [CC3.SpriteEffect.DemoProject github](https://github.com/BricL/CC3.SpriteEffect.DemoProject) 中。
 
 * 上述的概念在 [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect/tree/master) 實現了一個樣板庫，可依此使用及延伸出各種 Sprite 效果方便使用。
+
+<p align="center"><img src="./doc/img/demo_project.png" width="365"></p>
+<p align="center"><img src="./doc/img/demo_drawcall_count.png" width="365"></p>
 
 ## 參考文獻
 * [【分享】CocosCreator3.x 应用在UI(Sprite) 上的 shader(.effect) 的合批，通过自定义顶点参数](https://forum.cocos.org/t/topic/153963)
