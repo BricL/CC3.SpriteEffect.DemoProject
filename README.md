@@ -37,49 +37,116 @@
 
 ## 上代碼
 
+### SpDemoEffect
+
 * 繼承 Sprite Component
 
     ```typescript
     @ccclass('SpriteEffectBase')
-    export class SpriteEffectBase extends Sprite { 
+    export class SpDemoEffect extends Sprite { 
         ...
     }
     ```
 
-* 建立一張 128x128 RGBA32F 的參數貼圖
+* static 參數說明
 
     ```typescript
     @ccclass('SpriteEffectBase')
-    export class SpriteEffectBase extends Sprite { 
+    export class SpDemoEffect extends Sprite { 
         private static propsTexture: Texture2D | null = null;
         private static propBuffer: Float32Array | null = null;
+        private static effectUUID: string[] = [];
+        private static mat: Material | null = null;
+        private static isDirty: boolean = false;
+        private instanceID: number = -1;
+        ...
+    }
+    ```
 
-        onLoad() {
-            const w = 128;
-            const h = 128;
-            this.propBuffer = new Float32Array(w * h * 4);
+    * `propsTexture`，參數貼圖，用來儲存不同 Sprite 在同一個 Shader 各自的參數。
 
-            for (let y = 0; y < h; y++) {
-                for (let x = 0; x < w; x++) {
-                    const index = (x + (y * w)) * 4;
-                    this.propBuffer[index] = 1;
-                    this.propBuffer[index + 1] = 0;
-                    this.propBuffer[index + 2] = 1;
-                    this.propBuffer[index + 3] = 1;
-                }
+    * `propBuffer`，typescript 端參數 buffer，暫存參數並於異動時在 laterUpdate 同步至 `propsTexture`。
+
+    * `effectUUID`，儲存每個 Node 的 uuid，給予當下 Sprite 一個唯一的 instanceID。
+
+    * `instanceID`， Sprite 的 唯一的 instanceID，作為取出 propsTexture 參數用的 index。
+
+        ```typescript
+        this.instanceID = SpDemoEffect.effectUUID.findIndex((uuid) => uuid === this.node.uuid);
+        
+        if (this.instanceID === -1) {
+            this.instanceID = SpDemoEffect.effectUUID.push(this.node.uuid) - 1;
+        }
+        ```
+
+    * `mat`，同一效果共用材質球。
+
+    * `isDirty`，參數異動的旗標。
+
+
+* 建立材質球、參數貼圖
+
+    ```typescript
+    const PROP_TEXTURE_SIZE = 128;
+
+    @ccclass('SpriteEffectBase')
+    export class SpDemoEffect extends Sprite { 
+        ...
+        start() {
+            if (!this.effectAsset) {
+                log("Please specify the effect asset in the editor");
+                return;
             }
 
-            this.propsTexture = new Texture2D();
-            this.propsTexture.setFilters(Texture2D.Filter.NEAREST,
-                                         Texture2D.Filter.NEAREST);
-            this.propsTexture.reset({
-                width: w,
-                height: h,
-                format: Texture2D.PixelFormat.RGBA32F,
-                mipmapLevel: 0
-            });
+            this.instanceID = SpDemoEffect.effectUUID.findIndex((uuid) => uuid === this.node.uuid);
+            if (this.instanceID === -1) {
+                this.instanceID = SpDemoEffect.effectUUID.push(this.node.uuid) - 1;
+            }
 
-            this.propsTexture.uploadData(this.propBuffer);
+            this.color = new Color(this.instanceID % PROP_TEXTURE_SIZE,
+                this.pixelsUsage,
+                PROP_TEXTURE_SIZE,
+                255);
+
+            if (SpDemoEffect.mat === null) {
+                const w = PROP_TEXTURE_SIZE;
+                const h = this.pixelsUsage;
+
+                SpDemoEffect.propBuffer = new Float32Array(w * h * 4);
+                for (let y = 0; y < h; y++) {
+                    for (let x = 0; x < w; x++) {
+                        const index = (x + (y * w)) * 4;
+                        SpDemoEffect.propBuffer[index] = 1;
+                        SpDemoEffect.propBuffer[index + 1] = 0;
+                        SpDemoEffect.propBuffer[index + 2] = 1;
+                        SpDemoEffect.propBuffer[index + 3] = 1;
+                    }
+                }
+
+                SpDemoEffect.propsTexture = new Texture2D();
+                SpDemoEffect.propsTexture.setFilters(Texture2D.Filter.NEAREST, Texture2D.Filter.NEAREST);
+                SpDemoEffect.propsTexture.reset({
+                    width: w,
+                    height: h,
+                    format: Texture2D.PixelFormat.RGBA32F,
+                    mipmapLevel: 0
+                });
+                SpDemoEffect.propsTexture.uploadData(SpDemoEffect.propBuffer);
+
+                SpDemoEffect.mat = new Material();
+                SpDemoEffect.mat.initialize(
+                    {
+                        effectAsset: this.effectAsset,
+                        defines: {},
+                        technique: 0
+                    }
+                );
+                SpDemoEffect.mat.setProperty('propsTexture', SpDemoEffect.propsTexture);
+            }
+
+            this.customMaterial = SpDemoEffect.mat;
+
+            this.reflashParams();
         }
         ...
     }
@@ -88,45 +155,45 @@
 * 建立客制材質，綁定 `propsTexture` 指定至 customMaterial 參數
 
     ```typescript
-    @ccclass('SpriteEffectBase')
-    export class SpriteEffectBase extends Sprite {
-        @property({ type: EffectAsset, tooltip: '指定效果EffectAsset' })
-        public effectAsset: EffectAsset | null = null;
-    
-        private static propsTexture: Texture2D | null = null;
-        private static propBuffer: Float32Array | null = null;
+    const PROP_TEXTURE_SIZE = 128;
 
-        onLoad() {
+    @ccclass('SpriteEffectBase')
+    export class SpriteEffectBase extends Sprite { 
+        ...
+        start() {
             ...
-            let mat = new Material();
-            mat.initialize(
-                {
-                    effectAsset: this.effectAsset,
-                    defines: {},
-                }
-            );
-            mat.setProperty('propsTexture', propsTexture);
-            this.customMaterial = mat;
-            ...
+            if (SpDemoEffect.mat === null) {
+                ...
+                SpDemoEffect.mat = new Material();
+                SpDemoEffect.mat.initialize(
+                    {
+                        effectAsset: this.effectAsset,
+                        defines: {},
+                        technique: 0
+                    }
+                );
+                SpDemoEffect.mat.setProperty('propsTexture', SpDemoEffect.propsTexture);
+            }
+
+            this.customMaterial = SpDemoEffect.mat;
+            this.reflashParams();
         }
         ...
     }
     ```
 
-* 在 laterUpdate 時，若有參數有異動時進行更新
+* `laterUpdate` 時，若有參數有異動時進行更新
 
   ```typescript
   @ccclass('SpriteEffectBase')
   export class SpriteEffectBase extends Sprite {
-      ...
-      private static isDirty: boolean = false;
-      ...
-      lateUpdate(dt: number): void {    
-            if (this.isDirty) {
-                this.propsTexture.uploadData(this.propBuffer);
-                this.isDirty = false;
-            }
-      }
+    ...
+    lateUpdate(deltaTime: number) {
+        if (SpDemoEffect.isDirty) {
+            SpDemoEffect.propsTexture!.uploadData(SpDemoEffect.propBuffer!);
+            SpDemoEffect.isDirty = false;
+        }
+    }
   }
   ```
 
@@ -136,13 +203,15 @@
 
     因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
 
+### SpDemoEffect.effect
+
 * Sprite.color 如何在 TS 中編碼
 
     ```typescript
-    this.color = new Color(this._instanceID % PROP_TEXTURE_SIZE, // R Channel
-                           pixelsUsage,                          // G Channel
-                           PROP_TEXTURE_SIZE,                    // B Channel
-                           255);                                 // A Channel
+    this.color = new Color(this.instanceID % PROP_TEXTURE_SIZE,
+                           this.pixelsUsage,
+                           PROP_TEXTURE_SIZE,
+                           255);
     ```
 
     * R通道 `this._instanceID`，代表這是這個 shader 的第幾個實體，可以想成多個 Sprite 使用同一個 shader，但都有自己的 shader 參數。
@@ -153,7 +222,7 @@
 
     * A通道 `255`，設定為預設值，但不使用。
 
-* Sprite.color 如何在 Shader 中解碼
+* 在 Shader 中解碼 Sprite.color
 
     ```GLSL
     // propTexture: 參數贴图
@@ -172,7 +241,7 @@
 
     * 利用 `decodeColor` 計算出 `prop_texture_uv`，從 `propTexture` 中取出所屬的參數。
 
-* 範例簡單定義一個 `effectColor` 傳入 Shader 中，對原 Sprite 進行顏色相加，代碼如下：
+* 簡單定義一個 `effectColor` 傳入 Shader 中對原 Sprite 進行顏色相加
 
     ```GLSL
     CCEffect %{
@@ -250,9 +319,11 @@
     }%
     ```
 
-## 範例代碼
+## 完整代碼
 
-完整代碼放在 [CC3.SpriteEffect.DemoProject github](https://github.com/BricL/CC3.SpriteEffect.DemoProject) 中。而上述的概念在 [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect/tree/master) 實現了一個樣板庫，可依此使用及延伸出各種 Sprite 效果方便使用。
+* 完整代碼放在 [CC3.SpriteEffect.DemoProject github](https://github.com/BricL/CC3.SpriteEffect.DemoProject) 中。
+
+* 上述的概念在 [CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect/tree/master) 實現了一個樣板庫，可依此使用及延伸出各種 Sprite 效果方便使用。
 
 ## 參考文獻
 * [【分享】CocosCreator3.x 应用在UI(Sprite) 上的 shader(.effect) 的合批，通过自定义顶点参数](https://forum.cocos.org/t/topic/153963)
