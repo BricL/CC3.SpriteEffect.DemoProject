@@ -237,12 +237,11 @@
     // propTexture: 參數贴图
     // idxColor: 參數索引編碼
     // idxOfProps: 效果中的參數索引
-    vec4 getPropFromPropTexture(sampler2D propTexture, vec4 encodeColor, int idxOfProps) {
-        vec4 decodeColor = encodeColor * 255.0;
-        vec2 prop_texture_uv = vec2(1.0/(decodeColor.r) * decodeColor.b, 
-                                    1.0/(decodeColor.g) * float(idxOfProps));
-        return texture(propTexture, prop_texture_uv);
-    }
+    vec4 getPropFromPropTexture(sampler2D propTexture, vec4 encodeIdx, int idxOfProps) {
+        vec2 prop_uv = vec2((1.0/(encodeIdx.b * 255.0)) * (encodeIdx.r * 255.0), 
+                            (1.0/(encodeIdx.g * 255.0)) * float(idxOfProps));
+        return texture(propTexture, prop_uv);
+}
     ```
 
     * `encodeColor`，傳入的 Sprite.color。
