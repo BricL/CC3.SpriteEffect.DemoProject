@@ -34,7 +34,7 @@
 
 ## Propert Atlas
 
-`Peoperty Atlas` 的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的參數儲存在同一張`參數貼圖（PropsTexture）`中，渲染時透過索引於取出所屬參數計算，如此就能利用引擎本身的合批規則減少 Drawcall。
+`Peoperty Atlas` 的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的參數儲存在同一張 `參數貼圖（PropsTexture）` 中，渲染時透過索引於取出所屬參數計算，如此就能利用引擎本身的合批規則減少 Drawcall。
 
 ### 實踐思路
 
@@ -48,7 +48,7 @@
 
     <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="350"></p>
 
-    因此屬性貼圖`propsTexture`的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
+    因此屬性貼圖 `propsTexture` 的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
 
 ## 上代碼
 
