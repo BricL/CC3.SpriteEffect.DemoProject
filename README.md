@@ -78,7 +78,7 @@
     }
     ```
 
-    在同一 Sprite Shader 效果下，所有 Sprite 共用的參數: 
+    在同一 Shader 效果下，所有 Sprite 共用的參數: 
 
     * `propsTexture`，參數貼圖，用來儲存同一個 Shader 效果不同 Sprite 各自的設定參數。
 
