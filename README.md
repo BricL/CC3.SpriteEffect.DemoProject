@@ -333,7 +333,7 @@
 * 上述概念在 [GitHub CC3.SpriteEffect](https://github.com/BricL/CC3.SpriteEffect/tree/master) 實現了一個樣板庫，可依此延伸出各種 Sprite 效果合批方。
 
 <p align="center"><img src="./doc/img/demo_project.png" width="350"></p>
-<p align="center"><img src="./doc/img/demo_drawcall_count.png" width="350"></p>
+<p align="center"><img src="./doc/img/demo_drawcall_count.gif" width="350"></p>
 
 ## 參考文獻
 * [【分享】CocosCreator3.x 应用在UI(Sprite) 上的 shader(.effect) 的合批，通过自定义顶点参数](https://forum.cocos.org/t/topic/153963)
