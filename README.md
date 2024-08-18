@@ -34,7 +34,7 @@
 
 ## Propert Atlas
 
-這方法的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的設定參數 pack 至貼圖中，渲染時透過索引於取出所屬參數進行計算，如此就能利用引擎本身的合批規則減少 Drawcall。
+Peoperty Atlas 的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的參數儲存在同一張參數貼圖（PropsTexture）中，渲染時透過索引於取出所屬參數計算，如此就能利用引擎本身的合批規則減少 Drawcall。
 
 ### 實踐思路
 
