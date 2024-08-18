@@ -157,7 +157,7 @@
     }
     ```
 
-* 建立客制材質，綁定 `propsTexture` 指定至 customMaterial 參數
+* 建立材質並綁定 `propsTexture`，指定給 `customMaterial` 參數
 
     ```typescript
     const PROP_TEXTURE_SIZE = 128;
