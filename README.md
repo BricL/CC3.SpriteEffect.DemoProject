@@ -44,11 +44,11 @@
 
 * 藉此 index 在渲染時對 `參數貼圖(PropsTexture)` 取出所屬參數並計算。
 
-* 屬性貼圖的儲存方式
+* 屬性貼圖的儲存格式
 
     <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="350"></p>
 
-    因此屬性貼圖 `propsTexture` 的 width 取決於一次能合批(batch)多少個 sprite，若為 64 代表最多可以一次合批(batch) 64 個獨立的 sprite，可依使用場景調整。
+    屬性貼圖 `propsTexture` 的 width 決定一次能合批(batch)多少個 sprite，例如：64 代表最多可以一次合批(batch) 64 不同參數設定的 Sprite。
 
 ## 上代碼
 
