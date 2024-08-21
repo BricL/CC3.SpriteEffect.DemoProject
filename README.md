@@ -34,21 +34,21 @@
 
 ## Propert Atlas
 
-`Peoperty Atlas` 的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的參數儲存在同一張 `參數貼圖（PropsTexture）` 中，渲染時透過索引於取出所屬參數計算，如此就能利用引擎本身的合批規則減少 Drawcall。
+`Peoperty Atlas` 的特點在於，不同 Sprite 相同 Shader 效果下，將自己所屬的參數儲存在同一張 `PropsTexture (參數貼圖)` 中，渲染時透過索引於取出所屬參數計算，如此就能利用引擎本身的合批規則減少 Drawcall。
 
 ### 實踐思路
 
-* 對一 Shader 效果準備一張格式 RGBA32 的 `參數貼圖(PropsTexture)`。
+* 對一 Shader 效果準備一張格式 RGBA32 的 `PropsTexture (參數貼圖)`。
 
 * 每個 Sprite 在同一 Shader 效果下，自有所屬唯一的 index。
 
-* 藉此 index 在渲染時對 `參數貼圖(PropsTexture)` 取出所屬參數並計算。
+* 藉此 index 在渲染時對 `PropsTexture (參數貼圖)` 取出所屬參數並計算。
 
 * 屬性貼圖的儲存格式
 
     <p align="center"><img src="./doc/img/explain_props_texture_formate.png" width="350"></p>
 
-    屬性貼圖 `propsTexture` 的 width 決定一次能合批(batch)多少個 sprite，例如：64 代表最多可以一次合批(batch) 64 不同參數設定的 Sprite。
+    `PropsTexture (參數貼圖)` 的 width 決定一次能合批(batch)多少個 sprite，例如：64 代表最多可以一次合批(batch) 64 不同參數設定的 Sprite。
 
 ## 上代碼
 
@@ -80,9 +80,9 @@
 
     在同一 Shader 效果下，所有 Sprite 共用的參數: 
 
-    * `propsTexture`，參數貼圖，用來儲存同一個 Shader 效果不同 Sprite 各自的設定參數。
+    * `propsTexture (參數貼圖)`，，用來儲存同一個 Shader 效果不同 Sprite 各自的設定參數。
 
-    * `propBuffer`，TypeScript 端參數 buffer，暫存參數並於 `laterUpdate()` 檢查異動同步 `propsTexture`。
+    * `propBuffer`，TypeScript 端參數 buffer，暫存參數並於 `laterUpdate()` 檢查異動同步 `PropsTexture (參數貼圖)`。
 
     * `effectUUID` 與 `instanceID`，利用 CC 每個 Node 的 uuid 唯一性，給予當下 Sprite 一個唯一的 `instanceID`。
 
@@ -125,7 +125,7 @@
                 255);
 
             if (SpDemoEffect.mat === null) {
-                // 建立材質與屬性貼圖(PropsTexture)
+                // 建立材質與屬性貼圖 PropsTexture (參數貼圖)
                 const w = PROP_TEXTURE_SIZE;
                 const h = this.pixelsUsage;
 
@@ -156,7 +156,7 @@
     }
     ```
 
-* 建立材質並綁定 `propsTexture`，指定給 `customMaterial` 參數
+* 建立材質並綁定 `PropsTexture (參數貼圖)`，指定給 `customMaterial` 參數
 
     ```typescript
     const PROP_TEXTURE_SIZE = 128;
@@ -166,7 +166,7 @@
         //...略
         start() {
             //...略
-            // 建立客制材質，綁定 `propsTexture` 指定至 customMaterial 參數
+            // 建立客制材質，綁定 `PropsTexture (參數貼圖)` 指定至 customMaterial 參數
             if (SpDemoEffect.mat === null) {
                 //...略
                 SpDemoEffect.mat = new Material();
@@ -319,11 +319,11 @@
     }
     ```
 
-    * `propsTexture`，屬性貼圖。
+    * `PropsTexture (參數貼圖)`
 
-    * `encodeColor`，傳入的 Sprite.color，解碼後即為 `instanceID` ，貼圖座標的 `u` 用來存取 `propsTexture`。
+    * `encodeColor`，傳入的 Sprite.color，解碼後即為 `instanceID` ，貼圖座標的 `u` 用來存取 `PropsTexture (參數貼圖)`。
 
-    * `idxOfProps`，解法後為 Shader 效果中的第幾個參數，貼圖座標的 `v` 用來存取 `propsTexture`。
+    * `idxOfProps`，解法後為 Shader 效果中的第幾個參數，貼圖座標的 `v` 用來存取 `PropsTexture (參數貼圖)`。
 
 ## 範例專案下載
 
