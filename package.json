@@ -2,7 +2,7 @@
   "name": "CC3.SPRITEEDDECT.DEMOPROJECT",
   "uuid": "54dc7125-e8ad-4976-9981-774efa5cf8b1",
   "creator": {
-    "version": "3.8.3"
+    "version": "3.8.6"
   },
   "dependencies": {
     "@cocos/creator-types": "^3.8.2"
